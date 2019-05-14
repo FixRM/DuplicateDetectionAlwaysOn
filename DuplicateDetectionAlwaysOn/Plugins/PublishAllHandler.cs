@@ -11,7 +11,7 @@ namespace FixRM.Plugins
         stage: StageEnum.PostOperation,
         executionMode: ExecutionModeEnum.Asynchronous,
         filteringAttributes: null,
-        stepName: "FixRM.FixRM.Plugins.PublishAllHandler",
+        stepName: "FixRM.Plugins.PublishAllHandler",
         executionOrder: 100,
         isolationModel: IsolationModeEnum.Sandbox)]
     public class PublishAllHandler : IPlugin

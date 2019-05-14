@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>FixRM.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="D365Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e6d4fbedb179847e, processorArchitecture=MSIL">
       <HintPath>..\packages\D365Extensions.1.0.36\lib\net452\D365Extensions.dll</HintPath>
@@ -77,6 +83,7 @@
     <None Include="app.config" />
     <None Include="bin\coretools\CrmSvcUtil.exe.config" />
     <None Include="bin\coretools\LicenseTerms.docx" />
+    <None Include="FixRM.snk" />
     <None Include="packages.config" />
     <None Include="spkl.json" />
     <None Include="spkl\deploy-plugins.bat" />
@@ -119,10 +126,6 @@
       <InputAssemblies Include="$(OutputPath)\$(AssemblyName).dll" />
       <InputAssemblies Include="$(OutputPath)\D365Extensions.dll" />
     </ItemGroup>
-    <ILRepack Parallel="true"
-              InputAssemblies="@(InputAssemblies)"
-              LibraryPath="$(OutputPath)"
-              KeyFile="$(AssemblyOriginatorKeyFile)"
-              OutputFile="$(OutputPath)\$(AssemblyName).dll" />
+    <ILRepack Parallel="true" InputAssemblies="@(InputAssemblies)" LibraryPath="$(OutputPath)" KeyFile="$(AssemblyOriginatorKeyFile)" OutputFile="$(OutputPath)\$(AssemblyName).dll" />
   </Target>
 </Project>
