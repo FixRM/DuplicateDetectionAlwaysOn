@@ -84,6 +84,7 @@
     <None Include="bin\coretools\CrmSvcUtil.exe.config" />
     <None Include="bin\coretools\LicenseTerms.docx" />
     <None Include="FixRM.snk" />
+    <None Include="ILRepack.targets" />
     <None Include="packages.config" />
     <None Include="spkl.json" />
     <None Include="spkl\deploy-plugins.bat" />
@@ -120,12 +121,5 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\ILRepack.Lib.MSBuild.Task.2.0.16.1\build\ILRepack.Lib.MSBuild.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILRepack.Lib.MSBuild.Task.2.0.16.1\build\ILRepack.Lib.MSBuild.Task.targets'))" />
-  </Target>
-  <Target Name="AfterBuild">
-    <ItemGroup>
-      <InputAssemblies Include="$(OutputPath)\$(AssemblyName).dll" />
-      <InputAssemblies Include="$(OutputPath)\D365Extensions.dll" />
-    </ItemGroup>
-    <ILRepack Parallel="true" InputAssemblies="@(InputAssemblies)" LibraryPath="$(OutputPath)" KeyFile="$(AssemblyOriginatorKeyFile)" OutputFile="$(OutputPath)\$(AssemblyName).dll" />
   </Target>
 </Project>
