@@ -10,18 +10,8 @@
       "map": [
         {
           "map": "path",
-          "from": "PluginAssemblies\\**\\*.*",
-          "to": "..\\..\\Plugins\\bin\\**"
-        },
-        {
-          "map": "path",
-          "from": "WebResources\\*.*",
-          "to": "..\\..\\Webresources\\Webresources\\**"
-        },
-        {
-          "map": "path",
-          "from": "WebResources\\**\\*.*",
-          "to": "..\\..\\Webresources\\Webresources\\**"
+          "from": "PluginAssemblies\\**\\FixRMPlugins.dll",
+          "to": "..\\..\\Plugins\\bin\\**\\**"
         }
       ]
     }
