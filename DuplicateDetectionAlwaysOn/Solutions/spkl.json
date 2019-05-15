@@ -4,14 +4,14 @@
       "profile": "default,debug",
       "solution_uniquename": "DuplicateDetectionAlwaysOn",
       "packagepath": "package",
-      "solutionpath": "solution_{0}_{1}_{2}_{3}.zip",
-      "packagetype": "unmanaged",
+      "solutionpath": "DuplicateDetectionAlwaysOn_{0}_{1}_{2}_{3}.zip",
+      "packagetype": "managed",
       "increment_on_import": false,
       "map": [
         {
-          "map": "path",
+          "map": "file",
           "from": "PluginAssemblies\\**\\FixRMPlugins.dll",
-          "to": "..\\..\\Plugins\\bin\\**\\**"
+          "to": "..\\..\\Plugins\\bin\\**\\**\\FixRM.Plugins.dll"
         }
       ]
     }
